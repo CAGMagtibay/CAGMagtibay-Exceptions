@@ -1,3 +1,5 @@
+import java.io.FileNotFoundException;
+
 public class Lab {
     /**
      * An exception is an unexpected event that occurs during our program.
@@ -20,7 +22,10 @@ public class Lab {
      *
      * Check out this guide on throwing exceptions: https://rollbar.com/guides/java/how-to-throw-exceptions-in-java/#
      */
-    public void mustThrow() {
+    public void mustThrow() throws ArithmeticException{
+        int num1 = 3;
+        int num2 = 0;
 
+        System.out.println(num1 / num2); // divide by 0, causes ArithmeticException
     }
 }
